@@ -1,0 +1,79 @@
+:root {
+    /* ### Primary */
+
+    --light-cyan-color: hsl(193, 38%, 86%);
+    --neon-green-color: hsl(150, 100%, 66%);
+
+    /* ### Neutral */
+
+    --grayish-blue-color: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue-color: hsl(218, 23%, 16%);
+
+}
+
+body {
+    background-color: var(--dark-blue-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 10px;
+    width: 410px;
+    height: 250px;
+    position: relative;
+}
+
+.container .titulo {
+    color: var(--neon-green-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.container .mensagem {
+    font-size: 23px;
+    padding: 23px;
+    text-align: center;
+    color: var(--light-cyan-color);
+}
+
+.container .divisor img {
+    width: 350px;
+}
+
+.container .active {
+    background-color: var(--neon-green-color);
+    padding: 23px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    margin-top: 210px;
+}
+
+.container .active:hover {
+    color: #53FFAB;
+    cursor: pointer;
+    box-shadow: 0 5px 15px hsl(150, 100%, 66%);
+}
+
+@media(min-width: 768px){
+    .container{
+        padding-inline: 50px;
+        width: 386px;
+    }
+    .container .mensagem {
+        font-size: 21px;
+        padding: 26px;
+    }
+}
